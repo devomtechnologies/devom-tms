@@ -2,46 +2,44 @@
 <html>
 <head>
 <title>Dashboard</title>
-<link rel="stylesheet" href="css/style.css">
+<style>
+body{margin:0;font-family:Arial;}
+.sidebar{width:200px;height:100vh;background:#0f172a;color:#fff;position:fixed;padding:20px;}
+.sidebar a{display:block;color:#fff;margin:10px 0;text-decoration:none;}
+.main{margin-left:220px;padding:20px;}
+.card{background:#f1f5f9;padding:20px;margin:10px 0;}
+</style>
 </head>
 
 <body>
 
-<div class="dashboard">
+<div class="sidebar">
+<h3>Devom</h3>
+<a href="#">Dashboard</a>
+<a href="#">Ledger</a>
+<a href="#">Trips</a>
+<a href="#" onclick="logout()">Logout</a>
+</div>
 
-    <div id="sidebar"></div>
+<div class="main">
+<h2 id="welcome"></h2>
 
-    <div class="main">
-        <h2 id="welcome"></h2>
-
-        <div class="cards">
-            <div class="card">
-                <h3>Total Trips</h3>
-                <p id="trips"></p>
-            </div>
-
-            <div class="card">
-                <h3>Total Balance</h3>
-                <p id="balance"></p>
-            </div>
-
-            <div class="card">
-                <h3>Pending</h3>
-                <p id="pending"></p>
-            </div>
-        </div>
-    </div>
+<div class="card">Total Trips: 10</div>
+<div class="card">Balance: ₹5000</div>
+<div class="card">Pending: ₹2000</div>
 
 </div>
 
 <script>
-fetch('components/sidebar.html')
-.then(res=>res.text())
-.then(data=>document.getElementById('sidebar').innerHTML=data);
-</script>
+let u=localStorage.getItem("current");
+if(!u){location="login.html";}
+document.getElementById("welcome").innerHTML="Welcome "+u;
 
-<script src="js/dashboard.js"></script>
-<script src="js/auth.js"></script>
+function logout(){
+localStorage.removeItem("current");
+location="login.html";
+}
+</script>
 
 </body>
 </html>
