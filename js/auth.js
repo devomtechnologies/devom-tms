@@ -1,40 +1,39 @@
+import { auth } from "./firebase.js";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } 
+from "https://www.gstatic.com/firebasejs/12.11.0/firebase-auth.js";
+
 // REGISTER
-function registerUser(e){
-    e.preventDefault();
+window.registerUser = function(e){
+e.preventDefault();
 
-    const user = {
-        name: document.getElementById('name').value,
-        transport: document.getElementById('transport').value,
-        userId: document.getElementById('userId').value,
-        password: document.getElementById('password').value,
-        balance: 0
-    };
+const email = document.getElementById("r_email").value;
+const pass = document.getElementById("r_password").value;
 
-    localStorage.setItem(user.userId, JSON.stringify(user));
-
-    alert("Registration Done → Now Pay");
-    window.location.href = "index.html";
+createUserWithEmailAndPassword(auth, email, pass)
+.then(()=>{
+alert("Registered Successfully");
+location.reload();
+})
+.catch(err=>alert(err.message));
 }
 
 // LOGIN
-function loginUser(e){
-    e.preventDefault();
+window.loginUser = function(e){
+e.preventDefault();
 
-    const userId = document.getElementById('loginId').value;
-    const pass = document.getElementById('loginPass').value;
+const email = document.getElementById("email").value;
+const pass = document.getElementById("password").value;
 
-    const user = JSON.parse(localStorage.getItem(userId));
-
-    if(user && user.password === pass){
-        localStorage.setItem("currentUser", userId);
-        window.location.href = "dashboard.html";
-    } else {
-        alert("Wrong Login");
-    }
+signInWithEmailAndPassword(auth, email, pass)
+.then(()=>{
+window.location="dashboard.html";
+})
+.catch(err=>alert(err.message));
 }
 
 // LOGOUT
-function logout(){
-    localStorage.removeItem("currentUser");
-    window.location.href = "login.html";
+window.logoutUser = function(){
+signOut(auth).then(()=>{
+window.location="index.html";
+});
 }
