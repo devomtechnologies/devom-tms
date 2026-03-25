@@ -1,129 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Devom TMS</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-
 <style>
-/* HERO */
-.hero {
-    height: 100vh;
-    background: linear-gradient(135deg, #0f172a, #2563eb);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-}
-
-.hero-box {
-    text-align: center;
-    max-width: 800px;
-}
-
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 18px;
-    opacity: 0.9;
-    margin-bottom: 30px;
-}
-
-/* BUTTONS */
-.hero-buttons a {
-    margin: 10px;
-    padding: 14px 30px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.btn-primary {
-    background: #fff;
-    color: #2563eb;
-}
-
-.btn-secondary {
-    border: 2px solid #fff;
-    color: #fff;
-}
-
-/* FEATURES */
-.features {
-    padding: 80px 20px;
-    background: #f8fafc;
-    text-align: center;
-}
-
-.features h2 {
-    font-size: 32px;
-    margin-bottom: 40px;
-}
-
-.feature-grid {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.feature {
-    background: #fff;
-    padding: 25px;
-    border-radius: 12px;
-    width: 280px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    transition: 0.3s;
-}
-
-.feature:hover {
-    transform: translateY(-8px);
-}
+body{margin:0;font-family:Arial;}
+.header{background:#0f172a;color:#fff;padding:15px;display:flex;justify-content:space-between;}
+.hero{height:90vh;background:linear-gradient(#0f172a,#2563eb);color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;}
+.btn{padding:10px 20px;margin:5px;text-decoration:none;border-radius:5px;}
+.btn1{background:#fff;color:#2563eb;}
+.btn2{border:1px solid #fff;color:#fff;}
+.footer{background:#0f172a;color:#fff;text-align:center;padding:15px;}
+img{height:40px;}
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<section class="hero">
-    <div class="hero-box">
-        <h1>Devom Transport Management System</h1>
-        <p>Smart • Automated • High Performance Transport Software</p>
+<div class="header">
+<div><img src="logo.png"> Devom TMS</div>
+<div>
+<a href="login.html" style="color:white;">Login</a>
+<a href="register.html" style="color:white;margin-left:10px;">Register</a>
+</div>
+</div>
 
-        <div class="hero-buttons">
-            <a href="register.html" class="btn-primary">Get Started</a>
-            <a href="login.html" class="btn-secondary">Login</a>
-        </div>
-    </div>
-</section>
+<div class="hero">
+<div>
+<h1>Transport Management System</h1>
+<p>Smart Transport Software</p>
+<a href="register.html" class="btn btn1">Start</a>
+<a href="login.html" class="btn btn2">Login</a>
+</div>
+</div>
 
-<!-- FEATURES -->
-<section class="features">
-    <h2>Powerful System Features</h2>
-
-    <div class="feature-grid">
-        <div class="feature">
-            <h3>Smart Ledger</h3>
-            <p>Auto calculation with deductions & recovery tracking</p>
-        </div>
-
-        <div class="feature">
-            <h3>QR Payment</h3>
-            <p>Instant payment verification system</p>
-        </div>
-
-        <div class="feature">
-            <h3>Live Dashboard</h3>
-            <p>Real-time transport data & reports</p>
-        </div>
-    </div>
-</section>
+<div class="footer">© Devom Technologies</div>
 
 </body>
 </html>
