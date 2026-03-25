@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
 
+<body>
+
+<div class="dashboard">
+
+    <div id="sidebar"></div>
+
+    <div class="main">
+        <h2 id="welcome"></h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Total Trips</h3>
+                <p id="trips"></p>
+            </div>
+
+            <div class="card">
+                <h3>Total Balance</h3>
+                <p id="balance"></p>
+            </div>
+
+            <div class="card">
+                <h3>Pending</h3>
+                <p id="pending"></p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+fetch('components/sidebar.html')
+.then(res=>res.text())
+.then(data=>document.getElementById('sidebar').innerHTML=data);
+</script>
+
+<script src="js/dashboard.js"></script>
+<script src="js/auth.js"></script>
+
+</body>
+</html>
