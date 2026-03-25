@@ -1,12 +1,26 @@
-<div class="form-box">
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register</title>
+</head>
+<body>
+
 <h2>Register</h2>
-<form onsubmit="registerUser(event)">
-<input id="name" placeholder="Owner Name" required>
-<input id="transport" placeholder="Transport Name" required>
-<input id="userId" placeholder="User ID" required>
-<input id="password" type="password" placeholder="Password" required>
+
+<form onsubmit="register(event)">
+<input id="user" placeholder="User ID" required><br><br>
+<input id="pass" type="password" placeholder="Password" required><br><br>
 <button>Register</button>
 </form>
-</div>
 
-<script src="js/auth.js"></script>
+<script>
+function register(e){
+e.preventDefault();
+localStorage.setItem(user.value, pass.value);
+alert("Registered");
+window.location="login.html";
+}
+</script>
+
+</body>
+</html>
