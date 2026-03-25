@@ -2,38 +2,69 @@
 <html>
 <head>
 <title>Devom TMS</title>
+
 <style>
-body{margin:0;font-family:Arial;}
-.header{background:#0f172a;color:#fff;padding:15px;display:flex;justify-content:space-between;}
-.hero{height:90vh;background:linear-gradient(#0f172a,#2563eb);color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;}
-.btn{padding:10px 20px;margin:5px;text-decoration:none;border-radius:5px;}
-.btn1{background:#fff;color:#2563eb;}
-.btn2{border:1px solid #fff;color:#fff;}
-.footer{background:#0f172a;color:#fff;text-align:center;padding:15px;}
-img{height:40px;}
+body{margin:0;font-family:Arial;background:#f5f7fb;}
+.header{background:#0f172a;color:#fff;padding:15px 30px;display:flex;justify-content:space-between;}
+.logo{display:flex;align-items:center;gap:10px;}
+.logo img{height:40px;}
+.container{display:flex;justify-content:center;align-items:center;height:80vh;}
+.box{background:#fff;padding:30px;border-radius:10px;width:300px;text-align:center;box-shadow:0 0 10px #ccc;}
+input{width:100%;padding:10px;margin:10px 0;}
+button{width:100%;padding:10px;background:#0f172a;color:#fff;border:none;}
 </style>
+
 </head>
 
 <body>
 
 <div class="header">
-<div><img src="logo.png"> Devom TMS</div>
-<div>
-<a href="login.html" style="color:white;">Login</a>
-<a href="register.html" style="color:white;margin-left:10px;">Register</a>
+<div class="logo">
+<img src="images/logo.png">
+<span>Devom TMS</span>
 </div>
 </div>
 
-<div class="hero">
-<div>
-<h1>Transport Management System</h1>
-<p>Smart Transport Software</p>
-<a href="register.html" class="btn btn1">Start</a>
-<a href="login.html" class="btn btn2">Login</a>
+<div class="container">
+<div class="box">
+
+<h2>Login</h2>
+
+<form onsubmit="loginUser(event)">
+<input id="email" placeholder="Email" required>
+<input id="password" type="password" placeholder="Password" required>
+<button>Login</button>
+</form>
+
+<br>
+<a href="#" onclick="showRegister()">New User? Register</a>
+
 </div>
 </div>
 
-<div class="footer">© Devom Technologies</div>
+<!-- REGISTER POPUP -->
+<div id="registerBox" style="display:none;" class="container">
+<div class="box">
+
+<h2>Register</h2>
+
+<form onsubmit="registerUser(event)">
+<input id="r_email" placeholder="Email" required>
+<input id="r_password" type="password" placeholder="Password" required>
+<button>Register</button>
+</form>
+
+</div>
+</div>
+
+<script type="module" src="js/auth.js"></script>
+
+<script>
+function showRegister(){
+document.querySelector('.container').style.display="none";
+document.getElementById('registerBox').style.display="flex";
+}
+</script>
 
 </body>
 </html>
