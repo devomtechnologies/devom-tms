@@ -1,77 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Devom TMS</title>
-
-<style>
-body{margin:0;font-family:Arial;background:#f5f7fb;}
-.header{background:#0f172a;color:#fff;padding:15px 30px;display:flex;justify-content:space-between;}
-.logo{display:flex;align-items:center;gap:10px;}
-.logo img{height:40px;}
-.container{display:flex;justify-content:center;align-items:center;height:80vh;}
-.box{background:#fff;padding:30px;border-radius:10px;width:300px;text-align:center;box-shadow:0 0 10px #ccc;}
-input{width:100%;padding:10px;margin:10px 0;}
-button{width:100%;padding:10px;background:#0f172a;color:#fff;border:none;}
-</style>
-
+  <meta charset="UTF-8">
+  <title>Devom TMS</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<div class="header">
-    <div class="logo">
-        <img src="images/logo.png" onerror="this.style.display='none'">
-        <span>Devom TMS</span>
-    </div>
+<div id="header"></div>
 
-    <div class="nav">
-        <a href="#">Home</a>
-        <a href="#">Login</a>
-    </div>
-</div>
+<!-- HERO -->
+<section class="hero">
+  <h1>Transport Management System</h1>
+  <p>Manage your transport business digitally</p>
+  <a href="register.html" class="btn primary">Register Now</a>
+</section>
 
-<div class="container">
-<div class="box">
+<!-- FEATURES -->
+<section class="features">
+  <h2>Our Features</h2>
 
-<h2>Login</h2>
+  <div class="feature-box">
+    <h3>Vehicle Management</h3>
+    <p>Track all vehicles easily</p>
+  </div>
 
-<form onsubmit="loginUser(event)">
-<input id="email" placeholder="Email" required>
-<input id="password" type="password" placeholder="Password" required>
-<button>Login</button>
-</form>
+  <div class="feature-box">
+    <h3>Billing System</h3>
+    <p>Auto invoice & payment tracking</p>
+  </div>
 
-<br>
-<a href="#" onclick="showRegister()">New User? Register</a>
+  <div class="feature-box">
+    <h3>Driver Management</h3>
+    <p>Manage drivers & trips</p>
+  </div>
 
-</div>
-</div>
+</section>
 
-<!-- REGISTER POPUP -->
-<div id="registerBox" style="display:none;" class="container">
-<div class="box">
-
-<h2>Register</h2>
-
-<form onsubmit="registerUser(event)">
-<input id="r_email" placeholder="Email" required>
-<input id="r_password" type="password" placeholder="Password" required>
-<button>Register</button>
-</form>
-
-</div>
-</div>
-
-<script type="module" src="js/auth.js"></script>
+<div id="footer"></div>
 
 <script>
-function showRegister(){
-document.querySelector('.container').style.display="none";
-document.getElementById('registerBox').style.display="flex";
-}
+fetch('components/header.html')
+.then(res => res.text())
+.then(data => document.getElementById('header').innerHTML = data);
+
+fetch('components/footer.html')
+.then(res => res.text())
+.then(data => document.getElementById('footer').innerHTML = data);
 </script>
-<div class="footer">
-© 2026 Devom Technologies | All Rights Reserved
-</div>
+
 </body>
 </html>
