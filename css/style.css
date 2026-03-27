@@ -10,6 +10,10 @@ body {
   padding: 15px;
   color: white;
 }
+.logo {
+  height: 50px;
+  width: auto;
+}
 
 .container {
   width: 90%;
@@ -72,6 +76,7 @@ nav a {
   padding: 20px;
   border-radius: 10px;
 }
+
 
 /* FOOTER */
 .footer {
