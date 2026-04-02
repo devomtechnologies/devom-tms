@@ -1,27 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
 <title>Register</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+<h2>Register</h2>
+<input type="email" id="email" placeholder="Email"><br><br>
+<input type="password" id="password" placeholder="Password"><br><br>
+<button onclick="registerUser()">Register</button>
 
-<div id="header"></div>
-
-<section class="hero">
-    <h1>Register</h1>
-
-    <input type="text" id="regUser" placeholder="User ID"><br><br>
-    <input type="password" id="regPass" placeholder="Password"><br><br>
-
-    <button class="btn" onclick="register()">Register</button>
-</section>
-
-<div id="footer"></div>
-
-<script src="js/main.js"></script>
-
+<script type="module" src="js/firebase.js"></script>
 </body>
 </html>
