@@ -1,29 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <title>Login</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<h2>Login</h2>
+<div id="header"></div>
 
-<form onsubmit="login(event)">
-<input id="user" placeholder="User ID"><br><br>
-<input id="pass" type="password" placeholder="Password"><br><br>
-<button>Login</button>
-</form>
+<section class="hero">
+    <h1>Login</h1>
 
-<script>
-function login(e){
-e.preventDefault();
-if(localStorage.getItem(user.value)==pass.value){
-localStorage.setItem("current",user.value);
-window.location="dashboard.html";
-}else{
-alert("Wrong");
-}
-}
-</script>
+    <input type="text" id="loginUser" placeholder="User ID"><br><br>
+    <input type="password" id="loginPass" placeholder="Password"><br><br>
+
+    <button class="btn" onclick="login()">Login</button>
+</section>
+
+<div id="footer"></div>
+
+<script src="js/main.js"></script>
 
 </body>
 </html>
