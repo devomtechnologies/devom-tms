@@ -1,70 +1,58 @@
 body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: radial-gradient(circle at top, #020617, #000000);
-    color: white;
+  margin: 0;
+  font-family: Arial;
 }
 
-/* HEADER */
 .header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 60px;
-    background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  background: #0a2540;
+  color: white;
+  padding: 10px;
 }
 
-.logo img {
-    height: 50px;
+.logo {
+  height: 50px;
+  margin-right: 10px;
 }
 
-nav a {
-    color: #cbd5f5;
-    margin-left: 20px;
-    text-decoration: none;
-}
-
-/* HERO */
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-}
-
-input {
-    padding: 10px;
-    width: 250px;
-}
-
-/* BUTTON */
-.btn {
-    background: #38bdf8;
-    padding: 12px 25px;
-    border: none;
-    color: black;
-    cursor: pointer;
-}
-
-.btn-outline {
-    border: 1px solid #38bdf8;
-    background: transparent;
-    color: #38bdf8;
-}
-
-/* FEATURES */
-.features {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 50px;
-}
-
-.card {
-    background: #111;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-/* FOOTER */
 .footer {
-    text-align: center;
-    padding: 20px;
+  text-align: center;
+  background: #0a2540;
+  color: white;
+  padding: 10px;
 }
+
+.hero {
+  text-align: center;
+  padding: 50px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: blue;
+  color: white;
+  text-decoration: none;
+  margin: 5px;
+}
+
+.dashboard {
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+  background: #eee;
+  padding: 20px;
+}
+
+.sidebar a {
+  display: block;
+  margin: 10px 0;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
