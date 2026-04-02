@@ -1,27 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Login</title>
-<link rel="stylesheet" href="css/style.css">
-</head>
+window.loginUser = function(){
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
 
-<body>
-
-<div id="header"></div>
-
-<section class="hero">
-    <h1>Login</h1>
-
-    <input type="text" id="loginUser" placeholder="User ID"><br><br>
-    <input type="password" id="loginPass" placeholder="Password"><br><br>
-
-    <button class="btn" onclick="login()">Login</button>
-</section>
-
-<div id="footer"></div>
-
-<script src="js/main.js"></script>
-
-</body>
-</html>
+  signInWithEmailAndPassword(auth, email, password)
+  .then(() => {
+    alert("Login Successful");
+    window.location.href = "dashboard.html";
+  })
+  .catch(err => alert(err.message));
+}
