@@ -1,26 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <title>Register</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<h2>Register</h2>
+<div id="header"></div>
 
-<form onsubmit="register(event)">
-<input id="user" placeholder="User ID" required><br><br>
-<input id="pass" type="password" placeholder="Password" required><br><br>
-<button>Register</button>
-</form>
+<section class="hero">
+    <h1>Register</h1>
 
-<script>
-function register(e){
-e.preventDefault();
-localStorage.setItem(user.value, pass.value);
-alert("Registered");
-window.location="login.html";
-}
-</script>
+    <input type="text" id="regUser" placeholder="User ID"><br><br>
+    <input type="password" id="regPass" placeholder="Password"><br><br>
+
+    <button class="btn" onclick="register()">Register</button>
+</section>
+
+<div id="footer"></div>
+
+<script src="js/main.js"></script>
 
 </body>
 </html>
