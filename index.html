@@ -1,96 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Devom TMS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devॐ Technologies</title>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
 
-  <!-- Mobile Responsive -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- HEADER LOAD -->
-<div id="header"></div>
+<!-- HEADER -->
+<header class="header">
+    <div class="logo">
+        <img src="images/logo.png" alt="Devom Logo">
+        <h2>Devॐ Technologies</h2>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+    </nav>
+</header>
 
 <!-- HERO SECTION -->
 <section class="hero">
-  <h1>Transport Management System</h1>
-  <p>Manage your transport business digitally with Devom TMS</p>
-  
-  <a href="register.html" class="btn primary">Register Now</a>
-  <a href="login.html" class="btn">Login</a>
+    <h1>Powering Smart Logistics with Digital Precision</h1>
+    <p>Innovate. Automate. Elevate.</p>
+
+    <div class="buttons">
+        <a href="register.html" class="btn">Register Now</a>
+        <a href="login.html" class="btn btn-outline">Login</a>
+    </div>
 </section>
 
 <!-- FEATURES -->
 <section class="features">
-  <h2>Our Features</h2>
+    <div class="card">
+        <h3>Transport Management</h3>
+        <p>Manage trips, drivers, and payments easily.</p>
+    </div>
 
-  <div class="feature-box">
-    <h3>Vehicle Management</h3>
-    <p>Track all vehicles and trips easily</p>
-  </div>
+    <div class="card">
+        <h3>Smart Dashboard</h3>
+        <p>Real-time data and reports at one place.</p>
+    </div>
 
-  <div class="feature-box">
-    <h3>Billing & Invoice</h3>
-    <p>Auto generate invoices and manage payments</p>
-  </div>
-
-  <div class="feature-box">
-    <h3>Driver Management</h3>
-    <p>Manage drivers, trips and records</p>
-  </div>
-
-  <div class="feature-box">
-    <h3>Reports & MIS</h3>
-    <p>Get complete reports and analytics</p>
-  </div>
+    <div class="card">
+        <h3>Secure System</h3>
+        <p>Your data is safe and protected.</p>
+    </div>
 </section>
 
-<!-- BENEFITS -->
-<section class="features">
-  <h2>Why Choose Devom TMS?</h2>
-
-  <div class="feature-box">
-    <h3>Save Time</h3>
-    <p>Automation reduces manual work</p>
-  </div>
-
-  <div class="feature-box">
-    <h3>Accurate Data</h3>
-    <p>No more Excel errors</p>
-  </div>
-
-  <div class="feature-box">
-    <h3>Secure System</h3>
-    <p>Your data is सुरक्षित and protected</p>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="hero">
-  <h1>Start Your Digital Journey Today</h1>
-  <p>Join Devom TMS and grow your transport business</p>
-  
-  <a href="register.html" class="btn primary">Get Started</a>
-</section>
-
-<!-- FOOTER LOAD -->
-<div id="footer"></div>
-
-<!-- LOAD HEADER & FOOTER -->
-<script>
-fetch('components/header.html')
-.then(res => res.text())
-.then(data => document.getElementById('header').innerHTML = data);
-
-fetch('components/footer.html')
-.then(res => res.text())
-.then(data => document.getElementById('footer').innerHTML = data);
-</script>
+<!-- FOOTER -->
+<footer class="footer">
+    <p>© 2026 Devॐ Technologies | All Rights Reserved</p>
+</footer>
 
 </body>
 </html>
