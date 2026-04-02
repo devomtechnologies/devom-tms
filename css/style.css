@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: #0f172a;
+    background: radial-gradient(circle at top, #020617, #000000);
     color: white;
 }
 
@@ -9,29 +9,18 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px;
-    background: #020617;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
+    padding: 20px 60px;
+    background: rgba(0,0,0,0.7);
 }
 
 .logo img {
-    height: 40px;
-    margin-right: 10px;
+    height: 50px;
 }
 
 nav a {
-    color: white;
+    color: #cbd5f5;
     margin-left: 20px;
     text-decoration: none;
-}
-
-nav a:hover {
-    color: #38bdf8;
 }
 
 /* HERO */
@@ -40,29 +29,24 @@ nav a:hover {
     padding: 100px 20px;
 }
 
-.hero h1 {
-    font-size: 36px;
+input {
+    padding: 10px;
+    width: 250px;
 }
 
-.hero p {
-    color: #94a3b8;
-}
-
-/* BUTTONS */
+/* BUTTON */
 .btn {
     background: #38bdf8;
     padding: 12px 25px;
+    border: none;
     color: black;
-    text-decoration: none;
-    margin: 10px;
-    display: inline-block;
-    border-radius: 5px;
+    cursor: pointer;
 }
 
 .btn-outline {
     border: 1px solid #38bdf8;
-    color: #38bdf8;
     background: transparent;
+    color: #38bdf8;
 }
 
 /* FEATURES */
@@ -74,15 +58,13 @@ nav a:hover {
 }
 
 .card {
-    background: #020617;
+    background: #111;
     padding: 20px;
     border-radius: 10px;
-    width: 250px;
 }
 
 /* FOOTER */
 .footer {
     text-align: center;
     padding: 20px;
-    background: #020617;
 }
